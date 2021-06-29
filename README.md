@@ -26,6 +26,12 @@ $ rails db:seed
 $ rails server
 ```
 
+**Unit tests**:
+
+```console
+$ test test/models/message_test.rb
+```
+
 ## Usage
 
 | HTTP verbs | Paths  | Used for |
@@ -40,3 +46,7 @@ $ rails server
 | GET | /api/v1/discussions/:discussion_id | Show a single discussion |
 | PUT | /api/v1/discussions/:discussion_id | Update a discussion |
 | DELETE | /api/v1/discussions/:discussion_id | Delete a discussion |
+
+### CRUD
+
+**Create a new discussion/message**:
