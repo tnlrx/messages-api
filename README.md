@@ -24,6 +24,7 @@ $ rails db:seed
 
 ```console
 $ rails server
+```
 
 ## Usage
 
