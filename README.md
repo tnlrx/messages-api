@@ -1,24 +1,41 @@
-# README
+# Rails Rest API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Project Setup
 
-Things you may want to cover:
+**Install all gems**:
 
-* Ruby version
+```console
+$ bundle install
+```
 
-* System dependencies
+**Update the database with new data model**:
 
-* Configuration
+```console
+$ rails db:migrate
+```
 
-* Database creation
+**Feed the database with default seeds**:
 
-* Database initialization
+```console
+$ rails db:seed
+```
 
-* How to run the test suite
+**Start the web server on `http://localhost:3000` by default**:
 
-* Services (job queues, cache servers, search engines, etc.)
+```console
+$ rails server
 
-* Deployment instructions
+## Usage
 
-* ...
+| HTTP verbs | Paths  | Used for |
+| ---------- | ------ | --------:|
+| GET | /api/v1/discussions/:discussion_id/messages | List all messages of a discussion |
+| POST | /api/v1/discussions/:discussion_id/messages | Create a message in a discussion |
+| GET | /api/v1/discussions/:discussion_id/messages/:id | Show a single message of a discussion |
+| PUT | /api/v1/discussions/:discussion_id/messages/:id | Update a message in a discussion |
+| DELETE | /api/v1/discussions/:discussion_id/messages/:id | Delete a message in a discussion |
+| GET | /api/v1/discussions | List all discussions |
+| POST | /api/v1/discussions | Create a discussion |
+| GET | /api/v1/discussions/:discussion_id | Show a single discussion |
+| PUT | /api/v1/discussions/:discussion_id | Update a discussion |
+| DELETE | /api/v1/discussions/:discussion_id | Delete a discussion |
