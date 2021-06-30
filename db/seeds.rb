@@ -14,7 +14,7 @@ messages1  = Message.create(
     ]
 )
 
-Discussion.create(messages: messages1)
+Discussion.create({title: "disussion 1", messages: messages1})
 
 messages2 = Message.create(
     [
@@ -24,5 +24,5 @@ messages2 = Message.create(
     ]
 )
 
-Discussion.create(messages: messages2)
+Discussion.create({title: "discussion 2", messages: messages2})
 

@@ -29,7 +29,8 @@ $ rails server
 **Unit tests**:
 
 ```console
-$ test test/models/message_test.rb
+$ rails test test/models/message_test.rb
+$ rails test test/models/disussion_test.rb
 ```
 
 ## Usage
@@ -49,4 +50,14 @@ $ test test/models/message_test.rb
 
 ### CRUD
 
-**Create a new discussion/message**:
+**Create a new discussion**:
+
+```console
+curl --request POST --header "Content-Type: application/json" --data "{\"title\" : \"title\"}" http://localhost:3000/api/v1/discussions -v
+```
+
+**Create a new message**:
+
+```console
+curl --request POST --header "Content-Type: application/json" --data "{\"text\" : \"plip plop\", \"author\": \"toto@gmail.com\", \"recipient\" : \"tata@gmail.com\"}" http://localhost:3000/api/v1/discussions/1/messages -v
+```

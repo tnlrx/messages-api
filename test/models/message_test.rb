@@ -19,7 +19,7 @@ class MessageTest < ActiveSupport::TestCase
         }
       ])
 
-      discussion = Discussion.create(messages: messages)
+      discussion = Discussion.create({title: "disussion 1", messages: messages})
     
       assert discussion.save
       assert discussion.messages

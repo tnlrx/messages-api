@@ -16,8 +16,9 @@ module Api
 
       # POST /discussions
       def create
-        @discussion = Discussion.create!(discussion_params)
-        json_response(@discussion, :created)
+        @discussion = Discussion.new(params.permit(:title))
+        @discussion.save
+        json_response(@discussion)
       end
 
       # PUT /discussions/:id
@@ -41,8 +42,9 @@ module Api
 
       # liste des paramètres autorisés
       def discussion_params
-        params.require(:discussion)
+        params.require(:discussion).permit(:title)
       end
+      
     end
   end
 end
