@@ -1,5 +1,5 @@
 class ArchivageJob < ApplicationJob
-  include MessagesHelper
+  include MessagesHelpers
   queue_as :default
 
   def perform(*args)

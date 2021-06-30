@@ -30,6 +30,7 @@ $ rails server
 
 ```console
 $ rails test test/models/message_test.rb
+$ rails test test/helpers/message_helper_test.rb
 $ rails test test/models/disussion_test.rb
 ```
 
