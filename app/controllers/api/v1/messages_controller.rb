@@ -27,12 +27,6 @@ module Api
         head :no_content
       end
 
-      # PUT /messages/archive
-      #def archive
-      # diff = Time.now.to_i - 3.months.ago
-      #  Message.where('created_at<?', diff).update_all(archived: true)
-      #end
-
       # DELETE /messages/:id
       def destroy
         @message.destroy
@@ -41,11 +35,6 @@ module Api
 
       private
 
-      # before_action --> chargement du message
-      #def get_message
-      #  @message = Message.find(params[:id])
-      #@message = Message.joins(messages: :parent_message_id).where('id=? or parent_message_id=id', params[:id])
-      #end
       # liste des paramètres autorisés
       def message_params
         params.require(:message).permit(:text, :author, :recipient)
