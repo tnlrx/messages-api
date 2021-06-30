@@ -48,8 +48,6 @@ $ rails test test/models/disussion_test.rb
 | PUT | /api/v1/discussions/:discussion_id | Update a discussion |
 | DELETE | /api/v1/discussions/:discussion_id | Delete a discussion |
 
-### CRUD
-
 **Create a new discussion**:
 
 ```console
